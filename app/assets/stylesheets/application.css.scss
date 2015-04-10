@@ -36,3 +36,8 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+.jumbotron h1 {
+//   @extend .text-primary;
+  color: #069;
+}
