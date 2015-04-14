@@ -3,4 +3,8 @@ class PagesController < ApplicationController
   end
   def appointment
   end
+  def about
+  end
+  def help
+  end
 end

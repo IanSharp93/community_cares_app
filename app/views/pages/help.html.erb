@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Community Cares Help Page</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body>
+    We are here to help you!  This page is here to help you navigate our website!<br>
+    Contact: 
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>
