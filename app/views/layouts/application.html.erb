@@ -11,31 +11,20 @@
       <div class="container">
         <%= link_to "Community Cares", '#', id: "logo" %>
         <nav>
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-left">
             <li><%= link_to "Home",   '#' %></li>
             <li><%= link_to "About Us",  '#' %></li>
             <li><%= link_to "Help",   '#' %></li>
-            <li><%= link_to "Log in", '#' %></li>
+            <li><%= link_to "Quick Links", '#' %></li>
           </ul>
-          <ul class="nav navbar-nav navbar-left">
-            <li><%= link_to "Sign Up", signup_path %></li>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Request an Application", '#'  %></li>
           </ul>
         </nav>
       </div>
-       <%= render 'layouts/header' %>
-      <div class="container">
-        <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= message_type %>"><%= message %></div>
-        <% end %>
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
-    </div>
   
 
     <%= yield %>
     
-    <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails .env.development? %> 
   </body>
 </html>
