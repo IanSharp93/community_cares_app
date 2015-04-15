@@ -9,16 +9,16 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "Community Cares", '#', id: "logo" %>
+        <%= link_to "Community Cares", root_path, id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-left">
-            <li><%= link_to "Home",   '#' %></li>
-            <li><%= link_to "About Us",  '#' %></li>
-            <li><%= link_to "Help",   '#' %></li>
+            <li><%= link_to "Home",   root_path %></li>
+            <li><%= link_to "About Us",  about_path %></li>
+            <li><%= link_to "Help",   help_path %></li>
             <li><%= link_to "Quick Links", '#' %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Request an Application", '#'  %></li>
+            <li><%= link_to "Request an Appointment",  appointment_path  %></li>
           </ul>
         </nav>
       </div>
