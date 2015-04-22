@@ -21,6 +21,7 @@
   padding-top: 60px;
   border-style: solid;
   border-color: #404040;
+  color: #336699;
 }
 
 section {
@@ -39,9 +40,11 @@ textarea {
   margin-bottom: 20px;
 }
 
-.jumbotron h1 {
+.jumbotron {
 //   @extend .text-primary;
   color: #2185A6;
+  border-style: outset;
+  
 }
 
 .center h1 {
@@ -52,3 +55,6 @@ textarea {
   border-style: solid;
 }
 
+.container {
+  color: #336699;
+}

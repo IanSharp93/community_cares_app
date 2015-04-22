@@ -1,3 +1,18 @@
+<% content_for :add_user do %>
+  <%= simple_form_for @appointment do |f| %>
+    <%= f.input :first_name, label: 'First name' %>
+    <%= f.input :last_name, hint: 'Last name' %>
+    <%= f.input :sex, inline_label: 'Sex' %>
+    <%= f.input :email, label: 'user@domain.com' %>
+    <%= f.input :phone, inline_label: 'Phone' %>
+    <%= f.input :comments, placeholder: 'Tell us why you are here' %>
+    <%= f.input :type_of_appointment, inline_label: 'Appointment Type' %>
+    <%= f.error :base %>
+    <%= f.button :submit %>
+  <% end %>
+<% end %>
+<% 
+=begin %>
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 
@@ -21,3 +36,5 @@
     <% end %>
   </div>
 </div>
+<%
+=end %>

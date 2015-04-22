@@ -1,53 +1,48 @@
-<html>
-  <body style="background-color:lightsteelblue">
-    <div class="center jumbotron" style="background-color:aliceblue">
-      <h1>Request an Appointment Here</h1>
-        <p>Tell Us A Little Bit About Yourself</p>
+<head>
+  <title>Community Cares</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body>
+    <div class= "center h1">
+        <h1>Welcome Please Make an Appoinment</h1>
+        
+        <p>Fill These Out</p>
     </div>
-    <div class="jumbotron">
-    <form>
-      <div class="form-group">
-        <label for="InputFirstName">First Name</label>
-        <input type="text" class="form-control" id="InputFirstName" placeholder="Enter First Name">
+    <div>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
       </div>
-      
-      <div class="form-group">
-        <label for="InputLastName">Last Name</label>
-        <input type="text" class="form-control" id="InputLastName" placeholder="Enter Last Name">
-      </div>
-      
-      <div class="form-group">
-        <label for="GenderSelect">Choose Gender</label>
-        <select id="GenderSelect" class="form-control">
-          <option>Male</option>
-          <option>Female</option>
-          <option>Rather Not Say</option>
-          <option>Undecided</option>
-        </select>
-      </div>  
-      
-      <div class="form-group">
-        <label for="InputEmail1">Email address</label>
-        <input type="email" class="form-control" id="InputEmail1" placeholder="Enter email">
-      </div> 
-      
-      <div class="form-group">
-        <label for="InputPhone">Phone Number</label>
-        <input type="email" class="form-control" id="exampleInputPhone" placeholder="Enter Phone">
-      </div>
-      
-      <div class="form-group">
-        <label for="AssistanceSelect">What Assistance Are You Looking For</label>
-        <select id="AssistanceSelect" class="form-control">
-           <option>Psychiatrist</option>
-           <option>Some One To Talk To</option>
-           <option>Helping Hand</option>
-           <option>Shrink</option>         
-        </select>
-      </div>   
-     
-      <button type="submit" class="btn btn-default">Submit</button>
-     
-     </form> 
-  </body>
-</html>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+</form>
+</body>
+
+
+
+<div>
+<%= yield :add_appointment %>
+</div>

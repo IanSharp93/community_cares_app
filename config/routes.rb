@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'help' => 'pages#help'
   get 'about' => 'pages#about'
-  get 'appointment' => 'pages#appointment' 
+  get 'appointment' => 'pages#appointment'
   get 'services' => 'pages#services'
+  
+  match '/appointment_requests',  to: 'appointment_requests#new',   via: 'get'
+  resources :appointment_requests, only: [:new, :create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
