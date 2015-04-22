@@ -16,12 +16,15 @@
 
   @import "bootstrap-sprockets";
   @import "bootstrap";
-  
-  body {
-  padding-top: 60px;
-  border-style: solid;
-  border-color: #404040;
-  color: #336699;
+    
+body {
+  background:url("http://rack.0.mshcdn.com/media/ZgkyMDEzLzAxLzE5L2FhL2NvbW11bml0eWdyLjNmZjI4LmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw/49214cc6/19a/community-group.jpg");
+  background-size: cover;
+  min-height: 680px;
+  width: 100%;
+  opacity: 20%;
+  color: #008AB8;
+  font-size: 3em;
 }
 
 section {
@@ -38,16 +41,6 @@ textarea {
 
 .center h1 {
   margin-bottom: 20px;
-}
-
-.jumbotron {
-//   @extend .text-primary;
-  color: #2185A6;
-  border-style: outset;
-  
-}
-
-.center h1 {
   padding-top: 40px;
 }
 
@@ -55,6 +48,147 @@ textarea {
   border-style: solid;
 }
 
-.container {
+title {
+  color: #008AB8;
+  font-size: 5em;
+}
+head {
+    title {
+    margin-top:80px;
+    }
+}
+
+.btn {
+  color: white;
+
+}
+
+.navbar-nav {
+  li {
+    a {
+      padding: -50px;
+      margin: 5px 10px 5px 10px;
+      font-size: 1em;
+      font: bold;
+    }
+  }
+}
+
+
+
+.landing_container {
+  background-color: rgba(39, 174, 96, 0.82);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 40px 40px 40px 40px;
+  h1 {
+    font-weight: bold;
+    font-size: 4.3em;
+    letter-spacing: -1.5px;
+    color: white;
+  }
+  h2, h3, h4 {
+    font-weight: bold;
+    font-size: 3.5em;
+    letter-spacing: -1.5px;
+    color: #336699;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    font-size: 1.7em;
+    margin-bottom: 7px;
+    margin-top: 7px;
+  }
+}
+
+/* mixins, variables, etc. */
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* universal */
+
+
+li::first-letter {
+  text-transform: uppercase;
+}
+
+blockquote {
+  background: #336699;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+header.navbar-inverse {
+    color: #336699;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+
+
+/* header */
+
+
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 2.4em;
+  color: white;
+  text-transform: lowercase;
+  letter-spacing: -1px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
+#logo:hover {
   color: #336699;
+  text-decoration: none;
 }
