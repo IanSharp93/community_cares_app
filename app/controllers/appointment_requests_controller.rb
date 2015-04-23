@@ -7,12 +7,13 @@ class AppointmentRequestsController < ApplicationController
     # binding.pry
     
     begin
-      result = AppointmentRequestMailer.appointment_request_confirmation_email(@appointment_request).deliver
+      result1 = AppointmentRequestMailer.appointment_request_confirmation_email(@appointment_request).deliver
+      result2 = AppointmentRequestmailer.appointment_request_internal_email(@appointment_request).deliver
     rescue Exception => e
       puts e.message
     end
     
-    if result 
+    if result1 and result2 
       message = 'Thanks, check your email'
     else 
       message = 'Email did not send'
