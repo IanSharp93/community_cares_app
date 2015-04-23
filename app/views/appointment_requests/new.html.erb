@@ -1,11 +1,11 @@
 <%= simple_form_for @appointment_request do |f| %>
   <%= f.input :first_name, label: 'First name' %>
   <%= f.input :last_name %>
-  <%= f.input :sex, inline_label: 'Sex', placeholder: 'Male, Female, Rather Not Say' %>
+  <%= f.input :sex, :collection => ['Female', 'Male', 'Other'] %>
   <%= f.input :email, label: 'Email' %>
   <%= f.input :phone, inline_label: 'Phone' %>
   <%= f.input :comments, placeholder: 'Tell us why you are here' %>
-  <%= f.input :type_of_appointment, inline_label: 'Appointment Type' %>
+  <%= f.input :type_of_appointment, :collection => ['Professional help', 'Someone to talk to', 'Advocacy', 'Unsure'] %>
   <%= f.error :base %>
   <%= f.submit %>
 <% end %>
