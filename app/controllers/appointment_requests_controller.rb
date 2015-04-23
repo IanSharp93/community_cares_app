@@ -5,7 +5,13 @@ class AppointmentRequestsController < ApplicationController
   def create
     @appointment_request = AppointmentRequest.new(appointment_request_params)
     # binding.pry
-    result = AppointmentRequestMailer.appointment_request_confirmation_email(@appointment_request).deliver
+    
+    begin
+      result = AppointmentRequestMailer.appointment_request_confirmation_email(@appointment_request).deliver
+    rescue Exception => e
+      puts e.message
+    end
+    
     if result 
       redirect_to root_url, notice: 'Thanks, check your email'
     else 

@@ -4,6 +4,6 @@ class AppointmentRequestMailer < ApplicationMailer
     def appointment_request_confirmation_email(appointment_request)
         @appointment_request = appointment_request
         #@url = 'https://community-cares-iansharp93.c9.io/appointment_request'
-        mail(to: @appointment_request.email, subject: 'Welcome to Community Cares!')
+        mail(to: [@appointment_request.email, 'community.cares.boulder@gmail.com'], subject: 'Welcome to Community Cares!')
     end
 end
