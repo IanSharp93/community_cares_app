@@ -13,11 +13,12 @@ class AppointmentRequestsController < ApplicationController
     end
     
     if result 
-      redirect_to root_url, notice: 'Thanks, check your email'
+      message = 'Thanks, check your email'
     else 
-      flash[:notice] = 'Cannot send message.'
-      flash[:color]= "invalid"
+      message = 'Email did not send'
     end
+    
+    redirect_to root_url, notice: message
   end
     #need so
     
