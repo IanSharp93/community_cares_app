@@ -24,7 +24,6 @@ body {
   width: 100%;
   opacity: 20%;
   color: #008AB8;
-  font-size: 3em;
   padding-bottom: 100px;
 }
 
@@ -164,7 +163,7 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: $gray;
-  text-shadow: -3px 0 #0099FF, -3px 0 #0099FF, -3px 0 #0099FF, -3px 0 #0099FF
+  text-shadow: -1px 0 #0099FF, -1px 0 #0099FF, -1px 0 #0099FF, -1px 0 #0099FF
 }
 
 
@@ -190,25 +189,21 @@ h2 {
   text-decoration: none;
 }
 
-.container {
+.white-bg {
   background: white;
   opacity: 0.93;
   border-radius: 5px;
 }
 
-.container.container-no-bg {
-  background: none;
-  opacity: 1.0;
-}
-
-.simple_form {
-  width: 300px;
-  
-}
 
 .label.collection_radio_buttons {
   margin-right: 10px;
   vertical-align: -2px;
   margin-left: 2px;
+}
+
+.p-v {
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 

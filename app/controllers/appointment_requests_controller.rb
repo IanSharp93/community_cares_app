@@ -6,20 +6,32 @@ class AppointmentRequestsController < ApplicationController
     @appointment_request = AppointmentRequest.new(appointment_request_params)
     # binding.pry
     
-    begin
-      result1 = AppointmentRequestMailer.appointment_request_confirmation_email(@appointment_request).deliver
-      result2 = AppointmentRequestmailer.appointment_request_internal_email(@appointment_request).deliver
-    rescue Exception => e
-      puts e.message
+    if @appointment_request.valid?
+      AppointmentRequestMailer.appointment_request_confirmation_email(@appointment_request).deliver
+        
+      AppointmentRequestMailer.appointment_request_internal_email(@appointment_request).deliver
+        
+      redirect_to root_url, :notice =>"Thank you for reaching out. We'll be in touch with you soon"
+    else
+      # re-render new form (this automatically displays errors)
+      render action: 'new'
     end
+      
     
-    if result1 and result2 
-      message = 'Thanks, check your email'
-    else 
-      message = 'Email did not send'
-    end
     
-    redirect_to root_url, notice: message
+    # begin
+      
+    # rescue Exception => e
+    #   puts e.message
+    # end
+    
+    # if result1 and result2 
+    #   message = 'Thanks, check your email'
+    # else 
+    #   message = 'Email did not send'
+    # end
+    
+    
   end
     #need so
     

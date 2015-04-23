@@ -1,11 +1,28 @@
-<%= simple_form_for @appointment_request do |f| %>
-  <%= f.input :first_name, label: 'First name' %>
-  <%= f.input :last_name %>
-  <%= f.input :sex, :collection => ['Female', 'Male', 'Other'] %>
-  <%= f.input :email, label: 'Email' %>
-  <%= f.input :phone, inline_label: 'Phone' %>
-  <%= f.input :comments, placeholder: 'Tell us why you are here' %>
-  <%= f.input :type_of_appointment, :collection => ['Professional help', 'Someone to talk to', 'Advocacy', 'Unsure'] %>
-  <%= f.error :base %>
-  <%= f.submit %>
-<% end %>
+<% provide :container_class, "container-no-bg" %>
+
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6 white-bg">
+  <h2>Welcome! Please fill out the fields below.</h2>
+    <hr>
+    <%= simple_form_for @appointment_request, wrapper: :horizontal_form, html: {class: 'p-v'} do |f| %>
+      <%= f.input :first_name, label: 'First name' %>
+      <%= f.input :last_name %>
+      <%= f.input :sex, :collection => ['Female', 'Male', 'Other'], label: 'Gender' %>
+      <%= f.input :email, label: 'Email', placeholder: 'We never send spam or newsletters'  %>
+      <%= f.input :phone, inline_label: 'Phone', placeholder: 'XXX-XXX-XXXX' %>
+      <%= f.input :comments, placeholder: 'Tell us why you are here' %>
+      <%= f.input :type_of_appointment, :collection => ['Professional help', 'Someone to talk to', 'Advocacy', 'Unsure'] %>
+      <%= f.error :base %>
+      
+      <hr>
+      
+      <div class="text-center">
+        <%= f.submit class: 'btn btn-primary' %>
+      </div>
+      
+    <% end %>
+  </div>
+  <div class="col-sm-3"></div>
+</div>
+
