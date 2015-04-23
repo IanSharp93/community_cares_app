@@ -17,3 +17,6 @@
 
 #Ignore .c9 folder files
 /.c9
+
+#Ignore sensitive info files
+/.env

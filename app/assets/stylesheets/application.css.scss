@@ -25,6 +25,7 @@ body {
   opacity: 20%;
   color: #008AB8;
   font-size: 3em;
+  padding-bottom: 100px;
 }
 
 section {
@@ -65,12 +66,11 @@ head {
 
 .navbar-nav {
   li {
-    a {
       padding: -50px;
       margin: 5px 10px 5px 10px;
       font-size: 1em;
       font: bold;
-    }
+      color: white;
   }
 }
 
@@ -125,12 +125,7 @@ blockquote {
 
 header.navbar-inverse {
     color: #336699;
-    opacity: 0.4;
     filter: alpha(opacity=40);
-}
-
-body {
-  padding-top: 60px;
 }
 
 section {
@@ -159,6 +154,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  text-shadow: -5px 0 white, 0 5px white, -5px 0 white, 0 5px white;
 }
 
 h2 {
@@ -167,7 +163,8 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: $gray;
+  text-shadow: -3px 0 #0099FF, -3px 0 #0099FF, -3px 0 #0099FF, -3px 0 #0099FF
 }
 
 
@@ -191,4 +188,15 @@ h2 {
 #logo:hover {
   color: #336699;
   text-decoration: none;
+}
+
+.container {
+  background: white;
+  opacity: 0.93;
+  border-radius: 5px;
+}
+
+.container.container-no-bg {
+  background: none;
+  opacity: 1.0;
 }

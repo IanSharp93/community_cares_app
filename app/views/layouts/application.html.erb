@@ -7,8 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
   <body>
-    <header class="navbar navbar-default navbar-fixed-top navbar-inverse">
-      <div class="container">
+    <header class="navbar navbar-default navbar-inverse">
         <nav>
           <ul class="nav navbar-nav navbar-left">
             <li><%= link_to "Home",   root_path %></li>
@@ -16,12 +15,15 @@
             <li><%= link_to "Our Services", services_path %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Request an Appointment",  appointment_path  %></li>
+            <li><%= link_to "Request an Appointment",  new_appointment_request_path  %></li>
           </ul>
         </nav>
-      </div>
+    </header>
 
-    <%= yield %>
+    <div class="container <%= yield :container_class %>">
+      <%= render 'layouts/flashes' %>
+      <%= yield %>
+    </div>
     
   </body>
 </html>

@@ -1,40 +1,11 @@
-<% content_for :add_user do %>
-  <%= simple_form_for @appointment do |f| %>
-    <%= f.input :first_name, label: 'First name' %>
-    <%= f.input :last_name, hint: 'Last name' %>
-    <%= f.input :sex, inline_label: 'Sex' %>
-    <%= f.input :email, label: 'user@domain.com' %>
-    <%= f.input :phone, inline_label: 'Phone' %>
-    <%= f.input :comments, placeholder: 'Tell us why you are here' %>
-    <%= f.input :type_of_appointment, inline_label: 'Appointment Type' %>
-    <%= f.error :base %>
-    <%= f.button :submit %>
-  <% end %>
+<%= simple_form_for @appointment_request do |f| %>
+  <%= f.input :first_name, label: 'First name' %>
+  <%= f.input :last_name %>
+  <%= f.input :sex, inline_label: 'Sex', placeholder: 'Male, Female, Rather Not Say' %>
+  <%= f.input :email, label: 'Email' %>
+  <%= f.input :phone, inline_label: 'Phone' %>
+  <%= f.input :comments, placeholder: 'Tell us why you are here' %>
+  <%= f.input :type_of_appointment, inline_label: 'Appointment Type' %>
+  <%= f.error :base %>
+  <%= f.submit %>
 <% end %>
-<% 
-=begin %>
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
-      
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
-<%
-=end %>
